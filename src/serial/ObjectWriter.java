@@ -309,8 +309,10 @@ public class ObjectWriter {
 		if (clazz == null) {
 			return;
 		} else {
+			
 			Field[] fields = clazz.getDeclaredFields();
-			for (int i = 0; i < fields.length; i++) {
+			for (int i = 0; i < fields.length; i++) 
+			{
 				allFields.add(fields[i]);
 			}
 
