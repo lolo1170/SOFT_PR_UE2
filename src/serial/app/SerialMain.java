@@ -1,11 +1,14 @@
 package serial.app;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
 
 import datetime.Date;
 import person.Human;
 import person.Person;
+import serial.ObjectReader;
 import serial.ObjectWriter;
 
 public class SerialMain {
@@ -34,16 +37,16 @@ public class SerialMain {
 		
 		ObjectWriter ow = new ObjectWriter(); 
 		
-		try (OutputStream out = new FileOutputStream("C:\\Users\\Stefan\\Desktop\\SerizalizedObject15.txt")) {
+		try (OutputStream out = new FileOutputStream("C:\\Users\\Stefan\\Desktop\\SerizalizedObject24.txt")) {
 			//ow.write(a, out); 
-			ow.write(new Human("Stefan"), out);
+			ow.write(a, out);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 		
 /*
 		ObjectReader or = new ObjectReader(); 
-		try (InputStream in = new FileInputStream("SerizalizedObject.txt")) {
+		try (InputStream in = new FileInputStream("C:\\Users\\Stefan\\Desktop\\SerizalizedObjectOneString.txt")) {
 			Object o = or.read(in);
 			System.out.println(o); 
 		} catch (Exception e) {

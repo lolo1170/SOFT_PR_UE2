@@ -6,7 +6,7 @@ import java.util.List;
 import datetime.Date;
 import serial.UseSerializer;
 
-public class Person  {
+public class Person {
 	
 	
 	private String name; 
